@@ -1,0 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+  color: #2d2b2a;
+
+  overflow-x: hidden;
+  overflow-y: auto;
+
+  background-color: #6a7bba;
+  background-image: url('assets/img/bg-strip.jpg'), url('assets/img/bg-strip.jpg');
+  background-size: 1180px 1344px;
+  background-position: 100% -140px, calc(100% - 1180px) 350px;
+  background-repeat: no-repeat;
+}
+
+p:not(:first-child) {
+  margin-top: 15px;
+}

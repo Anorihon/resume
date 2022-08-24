@@ -1,0 +1,110 @@
+main {
+  position: relative;
+  display: grid;
+  grid-template-columns: 41% 54%;
+  column-gap: 5%;
+  max-width: 1180px;
+  min-height: 100vh;
+  padding: 50px;
+  margin: auto;
+
+  > .content,
+  > .sidebar {
+    position: relative;
+    z-index: 10;
+  }
+}
+
+h1 {
+  font-size: 60px;
+  line-height: 50px;
+  font-weight: 900;
+  color: #ffffff;
+  text-transform: uppercase;
+}
+
+h2 {
+  font-weight: 500;
+  font-size: 28px;
+  text-transform: uppercase;
+  color: #ffffff;
+  word-spacing: 20px;
+
+  margin: 20px 0 40px;
+}
+
+h3 {
+  font-size: 26px;
+  font-weight: 600;
+  word-spacing: 8px;
+  color: #3d3d3d;
+  text-transform: uppercase;
+
+  margin-bottom: 30px;
+}
+
+h4 {
+  font-size: 20px;
+  font-weight: 700;
+  color: #6a7bba;
+  text-transform: uppercase;
+}
+
+.avatar {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 50px;
+}
+
+#about-me > .text{
+  line-height: 22px;
+}
+
+#contacts {
+  display: grid;
+  grid-template-columns: 44% 44%;
+  column-gap: 12%;
+  row-gap: 66px;
+
+  margin: 60px 0;
+
+  > .contact > .title {
+    font-size: 18px;
+    color: #6a7bba;
+    font-weight: 800;
+
+    margin-bottom: 12px;
+  }
+
+  > .contact > a {
+    font-size: 18px;
+    color: #2d2b2a;
+    text-decoration: none;
+  }
+}
+
+.box {
+  padding: 45px;
+  background: #ffffff;
+}
+
+#skills > li:not(:first-child) {
+  margin-top: 20px;
+}
+
+.timeline {
+  position: relative;
+
+  &::before {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 6px;
+    height: 100%;
+    background: #d0cac8;
+    border-radius: 100px;
+  }
+}
