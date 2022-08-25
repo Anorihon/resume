@@ -8,8 +8,9 @@
         <span class="start">{{ startDate | moment('MMM YYYY') }}</span>
         <span class="separator"> - </span>
         <span v-if="finishDate !== -1" class="finish">{{ finishDate | moment('MMM YYYY') }}</span>
+        <span v-else>present time</span>
         <span class="separator"> · </span>
-        <span v-if="finishDate !== -1" class="time">{{ workTime }}</span>
+        <span class="time">{{ workTime }}</span>
       </div>
       <div class="place__separator">
         /
@@ -38,15 +39,13 @@ export default {
   },
   setup(props) {
     const workTime = ref('')
+    const finDate = props.finishDate === -1 ? Date.now() : props.finishDate
+    const startDate = moment(props.startDate)
+    const finishDate = moment(finDate)
+    const years = finishDate.diff(startDate, 'years')
+    const months = (finishDate.diff(startDate, 'months') + 1) - years * 12
 
-    if (props.finishDate !== -1) {
-      const startDate = moment(props.startDate)
-      const finishDate = moment(props.finishDate)
-      const years = finishDate.diff(startDate, 'years')
-      const months = finishDate.diff(startDate, 'months') + 1
-
-      workTime.value = (years > 0 ? years + ' years' : '') + (months > 0 ? months + ' months' : '')
-    }
+    workTime.value = (years > 0 ? years + ' years ' : '') + (months > 0 ? months + ' months' : '')
 
     return {
       workTime,
