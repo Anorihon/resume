@@ -1,0 +1,47 @@
+.work-place {
+  position: relative;
+  padding-left: 25px;
+
+  &:not(:first-child) {
+    margin-top: 55px;
+  }
+
+  &::before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: -5px;
+    width: 15px;
+    height: 15px;
+    background: #6a7bba;
+    border-radius: 100%;
+  }
+
+  .company {
+    margin: 5px 0;
+    font-size: 18px;
+  }
+
+  .place {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 20px;
+    margin: 10px 0 15px;
+
+    font-size: 18px;
+    color: #424243;
+
+    &__work-time {
+      //font-size: 20px;
+      font-weight: 600;
+      color: #2c2c2c;
+    }
+  }
+
+  .desc {
+    color: #5b5b5c;
+    line-height: 22px;
+  }
+}

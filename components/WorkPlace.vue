@@ -1,8 +1,11 @@
 <template>
-  <li>
+  <li class="work-place">
     <h4 class="position">
       {{ position }}
     </h4>
+    <div class="company">
+      {{ company }}
+    </div>
     <div class="place">
       <div class="place__work-time" :class="{ working: finishDate === -1 }">
         <span class="start">{{ startDate | moment('MMM YYYY') }}</span>
@@ -11,12 +14,6 @@
         <span v-else>present time</span>
         <span class="separator"> · </span>
         <span class="time">{{ workTime }}</span>
-      </div>
-      <div class="place__separator">
-        /
-      </div>
-      <div class="place__company">
-        {{ company }}
       </div>
     </div>
     <div class="desc">
@@ -54,51 +51,4 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>
-li {
-  position: relative;
-  padding-left: 25px;
-
-  &:not(:first-child) {
-    margin-top: 55px;
-  }
-
-  &::before {
-    content: '';
-    display: block;
-    position: absolute;
-    top: 0;
-    left: -5px;
-    width: 15px;
-    height: 15px;
-    background: #6a7bba;
-    border-radius: 100%;
-  }
-}
-
-.place {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 20px;
-  margin: 15px 0;
-
-  font-size: 18px;
-  color: #424243;
-
-  &__work-time {
-    font-size: 20px;
-    font-weight: 600;
-    color: #2c2c2c;
-  }
-
-  &__company {
-    font-style: italic;
-  }
-}
-
-.desc {
-  color: #5b5b5c;
-  line-height: 22px;
-}
-</style>
+<style src="assets/styles/work-place.scss" lang="scss"></style>
