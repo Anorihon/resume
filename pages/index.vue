@@ -12,7 +12,7 @@
       <section id="about-me">
         <h3>About me</h3>
         <div class="text">
-          <p>My main frontend stack is - vanilla JS, Vue/Nuxt, Angular, SCSS, Webpack</p>
+          <p>My main frontend stack includes vanilla JS, Vue/Nuxt, Angular, SCSS, Webpack</p>
           <p>Except Photoshop I am familiar with Sketch and Figma</p>
           <p>I have hobby - game development. And that is why i get practice on different languages and tools, like Unity3d (C#), Godot (gdscript looks like Python), Phaser etc</p>
         </div>
