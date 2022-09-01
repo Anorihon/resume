@@ -1,3 +1,5 @@
+@import "helpers";
+
 main {
   position: relative;
   display: grid;
@@ -8,10 +10,18 @@ main {
   padding: 50px;
   margin: auto;
 
+  > .content {
+    @extend %flex-column;
+  }
+
   > .content,
   > .sidebar {
     position: relative;
     z-index: 10;
+  }
+
+  @media print {
+    display: block;
   }
 }
 
@@ -55,14 +65,25 @@ h4 {
   max-width: 100%;
   height: auto;
   margin-bottom: 50px;
+
+  @media print {
+    max-width: 300px;
+  }
 }
 
-#about-me > .text{
-  line-height: 22px;
+#about-me {
+  flex-grow: 1;
+  @extend %flex-column;
+  justify-content: center;
+
+  > .text {
+    line-height: 22px;
+  }
 }
 
 #contacts {
-  display: grid;
+  display: none;
+  max-width: 600px;
   grid-template-columns: 44% 44%;
   column-gap: 12%;
   row-gap: 66px;
@@ -82,11 +103,28 @@ h4 {
     color: #2d2b2a;
     text-decoration: none;
   }
+
+  @media print {
+    display: grid;
+  }
+}
+
+#skills {
+  max-width: 600px;
+  margin-top: 50px;
+
+  @media print {
+    margin-top: 0;
+  }
 }
 
 .box {
   padding: 45px;
   background: #ffffff;
+
+  @media print {
+    padding: 45px 0;
+  }
 }
 
 #skills > li:not(:first-child) {
@@ -106,5 +144,15 @@ h4 {
     height: 100%;
     background: #d0cac8;
     border-radius: 100px;
+  }
+
+  @media print {
+    -webkit-print-color-adjust: exact;
+  }
+}
+
+@media print {
+  h1, h2, h3 {
+    color: #3d3d3d;
   }
 }

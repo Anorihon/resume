@@ -17,8 +17,16 @@ html, body {
   background-size: 1180px 1344px;
   background-position: 100% -140px, calc(100% - 1180px) 350px;
   background-repeat: no-repeat;
+
+  @media print {
+    background: none;
+  }
 }
 
 p:not(:first-child) {
   margin-top: 15px;
+}
+
+a[href^="tel:"] {
+  white-space: nowrap;
 }
