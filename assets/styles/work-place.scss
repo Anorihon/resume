@@ -1,3 +1,5 @@
+@import "helpers";
+
 .work-place {
   position: relative;
   padding-left: 25px;
@@ -43,5 +45,9 @@
   .desc {
     color: #5b5b5c;
     line-height: 22px;
+  }
+
+  @include media('print') {
+    break-inside: avoid;
   }
 }

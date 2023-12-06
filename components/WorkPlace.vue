@@ -32,7 +32,7 @@ export default {
     position: { type: String, required: true },
     company: { type: String, required: true },
     startDate: { type: Date, required: true },
-    finishDate: { type: Date, required: false, default: -1 },
+    finishDate: { type: [Date, Number], required: false, default: -1 },
   },
   setup(props) {
     const workTime = ref('')

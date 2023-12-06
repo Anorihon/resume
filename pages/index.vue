@@ -12,9 +12,9 @@
       <section id="about-me">
         <h3>About me</h3>
         <div class="text">
-          <p>My main frontend stack includes vanilla JS, Vue/Nuxt, Angular, SCSS, Webpack</p>
-          <p>Except Photoshop I am familiar with Sketch and Figma</p>
-          <p>I have hobby - game development. And that is why i get practice on different languages and tools, like Unity3d (C#), Godot (gdscript looks like Python), Phaser etc</p>
+          <p>Versatile software developer with a rich background in frontend and fullstack development. Specialized in technologies such as Angular, Vue, and Phaser, I've delivered impactful solutions in diverse domains, from gambling projects at GlobalLogic to collaborative ventures with Turkish colleagues at Insider</p>
+          <p>I bring over a decade of experience, showcasing adaptability and proficiency in various frameworks and CMS, including WordPress, Drupal, and Yii. My commitment to innovation extends beyond the web, with a passion for game development in Unity3D, Godot, and Phaser</p>
+          <p>Equipped with a strong technical foundation in vanilla JS, Vue/Nuxt, Angular, and design tools like Photoshop, Sketch, and Figma, I am dedicated to driving excellence in every project. My enthusiasm for continuous learning and problem-solving makes me a valuable asset to any development team</p>
         </div>
       </section>
       <ul id="contacts">
@@ -44,20 +44,20 @@
         </li>
       </ul>
 
-      <ul id="skills" class="box">
-        <skill-component title="JavaScript" :progress="100" />
-        <skill-component title="Vue" :progress="100" />
-        <skill-component title="Nuxt" :progress="100" />
-        <skill-component title="Angular" :progress="80" />
-        <skill-component title="React" :progress="50" />
-        <skill-component title="TypeScript" :progress="80" />
-        <skill-component title="Phaser" :progress="100" />
-        <skill-component title="Wordpress" :progress="100" />
-        <skill-component title="PHP" :progress="60" />
-        <skill-component title="С#" :progress="60" />
-        <skill-component title="Git" :progress="100" />
-        <skill-component title="SCSS" :progress="100" />
-      </ul>
+      <section id="skills" class="box">
+        <div class="content">
+          <img src="~assets/img/skills/js.png" alt="JavaScript">
+          <img src="~assets/img/skills/angular.png" alt="Angular">
+          <img src="~assets/img/skills/vue.png" alt="Vue">
+          <img src="~assets/img/skills/nuxt.png" alt="Nuxt">
+          <img src="~assets/img/skills/phaser.png" alt="Phaser">
+          <img src="~assets/img/skills/typescript.png" alt="TypeScript">
+          <img src="~assets/img/skills/wordpress.png" alt="Wordpress">
+          <img src="~assets/img/skills/php.png" alt="PHP">
+          <img src="~assets/img/skills/git.png" alt="Git">
+          <img src="~assets/img/skills/scss.png" alt="SCSS">
+        </div>
+      </section>
     </div>
     <aside class="sidebar">
       <div id="experience" class="box">
@@ -67,6 +67,7 @@
             company="GlobalLogic"
             position="Software developer"
             :start-date="new Date(Date.parse('Nov 2021'))"
+            :finish-date="new Date(Date.parse('Dec 2023'))"
           >
             <p>I am working on Gambling project.</p>
             <p>My main technologies on current position is Angular and Phaser</p>
